@@ -38,6 +38,8 @@ function App() {
           showCover={true}
           width={(portrait ? width - 16 : width / 2) - 16}
           height={height - 32}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          {...({} as any)}
         >
           <div className="cursor-pointer cover">
             <div className="flex flex-col items-center justify-center w-full h-full">
