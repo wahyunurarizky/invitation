@@ -1,6 +1,7 @@
 import HTMLFlipBook from 'react-pageflip'
 import useWindowDimensions from './hooks/useWindowDimensions'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { TbMusic, TbMusicOff } from 'react-icons/tb'
 
 function App() {
   const { width, height } = useWindowDimensions()
@@ -8,14 +9,32 @@ function App() {
 
   // State to manage the scale
   const [isScaled, setIsScaled] = useState(false)
+  // State to manage the music playback
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  // Ref for the audio element
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   // Function to toggle the scale
   const toggleScale = () => {
     setIsScaled(true)
+    toggleMusic()
+  }
+
+  // Function to toggle music play/pause
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
   }
 
   return (
-    <div className="w-full h-screen bg-cover bg-table">
+    <div className="relative w-full h-screen bg-cover bg-table">
       {/* Conditionally apply scale-75 or scale-100 with animation */}
 
       {!isScaled && (
@@ -59,6 +78,14 @@ function App() {
           <div className="bg-red-200 back">Page 8</div>
         </HTMLFlipBook>
       </div>
+
+      {/* Music icon */}
+      <div className="absolute bottom-4 right-4 z-[1000] cursor-pointer" onClick={toggleMusic}>
+        {isPlaying ? <TbMusic size={32} /> : <TbMusicOff size={32} />}
+      </div>
+
+      {/* Audio element */}
+      <audio ref={audioRef} src="/song.mp3" />
     </div>
   )
 }
