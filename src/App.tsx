@@ -27,7 +27,7 @@ function App() {
       )}
 
       <div
-        className={`absolute p-8  w-full h-full ${
+        className={`absolute p-8 w-full h-full ${
           isScaled ? 'scale-100 translate-x-0' : 'scale-[.6] translate-x-32'
         } transition-transform duration-500 ease-in-out overflow-hidden`}
       >
@@ -36,8 +36,8 @@ function App() {
           drawShadow
           size={portrait ? 'fixed' : 'stretch'}
           showCover={true}
-          width={(portrait ? width - 16 : width / 2) - 16}
-          height={height - 32}
+          width={(portrait ? width - 32 : width / 2) - 32}
+          height={height - 64}
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           {...({} as any)}
         >
