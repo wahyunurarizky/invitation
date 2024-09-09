@@ -1,7 +1,7 @@
 import HTMLFlipBook from 'react-pageflip'
 import useWindowDimensions from './hooks/useWindowDimensions'
 import { useState, useRef } from 'react'
-import { TbMusic, TbMusicOff } from 'react-icons/tb'
+import { PiVinylRecord } from 'react-icons/pi'
 
 function App() {
   const { width, height } = useWindowDimensions()
@@ -81,7 +81,7 @@ function App() {
 
       {/* Music icon */}
       <div className="absolute bottom-4 right-4 z-[1000] cursor-pointer" onClick={toggleMusic}>
-        {isPlaying ? <TbMusic size={32} /> : <TbMusicOff size={32} />}
+        <PiVinylRecord className={`text-5xl  ${isPlaying ? 'animate-spin' : ''}`} />
       </div>
 
       {/* Audio element */}
