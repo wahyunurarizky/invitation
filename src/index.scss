@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  font-family: 'Tangerine', cursive;
+  font-family: 'Yesteryear', cursive;
 }
 
 .cover {
   background: linear-gradient(
       to right,
-      rgb(255, 249, 250) 3px,
-      rgba(255, 255, 255, 0.5) 5px,
-      rgba(255, 255, 255, 0.25) 7px,
-      rgba(255, 255, 255, 0.25) 10px,
+      rgba(250, 249, 238, 0.7) 3px,
+      rgba(99, 96, 60, 0.5) 5px,
+      rgba(99, 96, 60, 0.25) 7px,
+      rgba(99, 96, 60, 0.25) 10px,
       transparent 12px,
       transparent 16px,
-      rgba(255, 255, 255, 0.25) 17px,
+      rgba(99, 96, 60, 0.25) 17px,
       transparent 22px
     ),
-    rgb(229, 226, 226);
+    #d1cfbd;
   // url(https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L.jpg);
   background-size: cover;
   box-shadow: 0 0 5px -1px black, inset -1px 1px 2px rgba(255, 255, 255, 0.5);
   margin: auto;
-  border-radius: 3px;
+  border-radius: 2px;
   width: 389px;
   height: 500px;
 }
