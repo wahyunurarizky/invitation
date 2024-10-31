@@ -6,6 +6,9 @@ import One from './Slide/One';
 import { Icon } from '@iconify/react';
 import Two from './Slide/Two';
 import Three from './Slide/Three';
+import First from './Mobile/First';
+import Second from './Mobile/Second';
+import Third from './Mobile/Third';
 
 function App() {
   const { width, height } = useWindowDimensions();
@@ -101,7 +104,11 @@ function App() {
   } else {
     return (
       <div className="relative flex items-center justify-center w-full h-screen bg-cover bg-table">
-        <div className="h-screen max-w-md mx-auto min-w-[400px] bg-red-100">Mobile</div>
+        <div className="h-screen max-w-md mx-auto min-w-[400px] bg-inv-white5 overflow-auto">
+          <First />
+          <Second />
+          <Third />
+        </div>
       </div>
     );
   }
