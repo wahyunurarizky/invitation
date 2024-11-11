@@ -1,11 +1,25 @@
 import { Icon } from '@iconify/react';
+import { useEffect, useState } from 'react';
 
 const One = () => {
+  const [recipient, setRecipient] = useState('');
+
+  useEffect(() => {
+    // Parse the 'to' query parameter from the URL
+    const params = new URLSearchParams(window.location.search);
+    const toParam = params.get('to');
+
+    // If 'to' parameter exists, update the recipient
+    if (toParam) {
+      setRecipient(toParam);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-8 p-8">
       <div className="flex flex-col items-center justify-center text-xl font-crimson text-inv-gray">
         <div>
-          Hai <span className="font-bold">Grup arisan semen tiga roda</span>
+          Hai <span className="font-bold">{recipient}</span>
         </div>
         <div>kami mengundang acara pernikahan</div>
       </div>

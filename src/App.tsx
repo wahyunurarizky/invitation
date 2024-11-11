@@ -47,7 +47,7 @@ function App() {
     }
   };
 
-  const isDesktop = width >= 1440;
+  const isDesktop = width >= 1920;
 
   return (
     <div

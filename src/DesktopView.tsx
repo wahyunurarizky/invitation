@@ -3,6 +3,7 @@ import Two from './Slide/Two';
 import Three from './Slide/Three';
 import HTMLFlipBook from 'react-pageflip';
 import { Icon } from '@iconify/react';
+import End from './Slide/End';
 
 const DesktopView = ({
   isScaled,
@@ -57,11 +58,13 @@ const DesktopView = ({
           <div className="bg-inv-white370 backdrop-blur-md">
             <Three />
           </div>
-          <div className="bg-red-200">Page 3</div>
-          <div className="bg-red-200">Page 4</div>
-          <div className="bg-red-200">Page 5</div>
-          <div className="bg-red-200">Page 6</div>
-          <div className="bg-red-200 back">Page 8</div>
+          <div className="bg-inv-white370 backdrop-blur-md"></div>
+          <div className="bg-inv-white370 backdrop-blur-md"></div>
+          <div className="bg-inv-white370 backdrop-blur-md"></div>
+          <div className="bg-inv-white370 backdrop-blur-md"></div>
+          <div className="back">
+            <End />
+          </div>
         </HTMLFlipBook>
       </div>
     </>
