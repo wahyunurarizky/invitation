@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const Third = () => {
   return (
     <motion.div
-      className="flex flex-col justify-between w-full pt-8 overflow-hidden h-dvh"
+      className="flex flex-col justify-between w-full pt-16 pb-8 h-dvh"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
