@@ -22,13 +22,13 @@ const Third = () => {
         {/* Akad Nikah Animation from Left */}
         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.4 }} viewport={{ amount: 0.5 }}>
           <h2 className="font-gideon text-[40px] mt-20">08.00 - 10.30</h2>
-          <h3 className="text-[24px] font-crimson font-light text-inv-grayA">Akad Nikah</h3>
+          <h3 className="text-[24px] font-Comfortaa font-light text-inv-grayA">Akad Nikah</h3>
         </motion.div>
 
         {/* Greeting Guest Animation from Right */}
         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.6 }} viewport={{ amount: 0.5 }}>
           <h2 className="font-gideon text-[40px] mt-10">10.30 - 14.00</h2>
-          <h3 className="text-[24px] font-crimson font-light text-inv-grayA">Greeting Guest</h3>
+          <h3 className="text-[24px] font-Comfortaa font-light text-inv-grayA">Greeting Guest</h3>
         </motion.div>
       </motion.div>
       <motion.div
