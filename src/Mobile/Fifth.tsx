@@ -54,13 +54,13 @@ const Fifth = () => {
     >
       {/* Heading Animation */}
       <motion.h1
-        className="font-gideon text-[60px] font-bold text-gray-800 self-start"
+        className="font-gideon text-[60px] text-gray-800 self-start"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ amount: 0.5 }}
       >
-        Messages
+        MESSAGES
       </motion.h1>
 
       {/* Form Animation */}
