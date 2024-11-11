@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const First = () => {
   return (
     <motion.div
-      className="flex flex-col justify-between h-screen"
+      className="flex flex-col justify-between h-dvh"
       initial={{ opacity: 0, x: 0 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
@@ -12,7 +12,7 @@ const First = () => {
       <div className="flex-1 bg-bottom bg-cover bg-mobile1 animate-zoomInOut"></div>
       <div className="p-10">
         <motion.h2
-          className="font-crimson text-[24px] text-inv-grayA font-light max-w-[150px]"
+          className="font-Comfortaa text-[24px] text-inv-grayA font-light max-w-[200px]"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}

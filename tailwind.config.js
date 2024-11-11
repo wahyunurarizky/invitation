@@ -6,7 +6,8 @@ export default {
       backgroundImage: {
         table: "url('/bg.png')",
         bgwhite: "url('/bgwhite.jpg')",
-        mobile1: "url('/mobile1.png')"
+        mobile1: "url('/mobile1.png')",
+        mobile3: "url('/mobile3.png')"
       },
       colors: {
         inv: {
@@ -21,7 +22,8 @@ export default {
           white380: 'rgba(250, 249, 238, 0.8)',
           gray50: 'rgba(57, 56, 44, 0.5)',
           gray20: 'rgba(57, 56, 44, 0.2)',
-          grayA: '#616161'
+          grayA: '#616161',
+          dark: '#39382C'
         }
       },
       fontFamily: {
@@ -30,7 +32,8 @@ export default {
         gilda: ['Gilda Display', 'serif'],
         gideon: ['Gideon Roman', 'serif'],
         Belleza: ['Belleza', 'sans-serif'],
-        RedHat: ['Red Hat Display', 'sans-serif']
+        RedHat: ['Red Hat Display', 'sans-serif'],
+        Comfortaa: ['Comfortaa', 'cursive']
       },
       keyframes: {
         slideIn: {
@@ -49,6 +52,10 @@ export default {
         'shadow-glow': {
           '0%, 100%': { boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)' },
           '50%': { boxShadow: '0 0 20px rgba(0, 0, 0, 0.6)' }
+        },
+        leftToRight: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' }
         }
       },
       animation: {
@@ -56,7 +63,8 @@ export default {
         zoomInOut: 'zoomInOut 2s ease-in-out forwards',
         fadeInSlideUp: 'fadeInSlideUp 1.5s ease-out forwards',
         spinLong: 'spin 4s linear infinite',
-        'shadow-glow': 'shadow-glow 1.5s ease-in-out infinite'
+        'shadow-glow': 'shadow-glow 1.5s ease-in-out infinite',
+        leftToRight: 'leftToRight 1s ease-out forwards'
       }
     }
   },

@@ -61,7 +61,6 @@ const DesktopView = ({
           <div className="bg-red-200">Page 4</div>
           <div className="bg-red-200">Page 5</div>
           <div className="bg-red-200">Page 6</div>
-          <div className="bg-red-200">Page 7</div>
           <div className="bg-red-200 back">Page 8</div>
         </HTMLFlipBook>
       </div>

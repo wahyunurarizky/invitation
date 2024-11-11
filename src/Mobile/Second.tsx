@@ -2,35 +2,42 @@ import { motion } from 'framer-motion';
 
 const Second = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ amount: 0.5 }}>
-      <motion.img
-        src="/mobile3.png"
-        className="w-full"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
+    <motion.div
+      className="flex flex-col justify-between w-full gap-4 pb-8 h-dvh"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ amount: 0.5 }}
+    >
+      <motion.div
+        className="flex-1 bg-bottom bg-cover bg-mobile3"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
         viewport={{ amount: 0.5 }}
-        alt=""
-      />
-      <div className="p-10">
+      ></motion.div>
+
+      <div className="px-8">
         <motion.h2
-          className="font-gideon text-[60px]"
+          className="font-gideon text-[60px] leading-[60px] font-light"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
           viewport={{ amount: 0.5 }}
         >
-          08 Desember 2024
+          08/12
+          <br />
+          2024
         </motion.h2>
         <motion.h4
-          className="font-light font-crimson flex flex-col text-inv-grayA text-[24px]"
+          className="font-light font-crimson flex flex-col text-inv-grayA text-[24px] my-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
           viewport={{ amount: 0.5 }}
         >
           Joglo Asri Sari Kuring Indah, Kota Cilegon
-          <a className="flex items-center justify-start text-base" href="https://maps.app.goo.gl/Rdm81Bm1dh7B26up8" target="_blank">
+          <a className="flex items-center justify-start mt-2 text-lg " href="https://maps.app.goo.gl/Rdm81Bm1dh7B26up8" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
               <g fill="currentColor">
                 <path
@@ -48,7 +55,7 @@ const Second = () => {
                 <path d="M13.435 9.14a.5.5 0 0 1 .369-.929a3 3 0 0 1 1.74 1.84l1.334 4A3 3 0 0 1 14.03 18H5.97a3 3 0 0 1-2.846-3.949l1.333-4A3 3 0 0 1 6.24 8.194a.5.5 0 1 1 .355.935a2 2 0 0 0-1.19 1.239l-1.333 4A2 2 0 0 0 5.97 17h8.062a2 2 0 0 0 1.897-2.633l-1.332-4a2 2 0 0 0-1.16-1.226"></path>
               </g>
             </svg>
-            View Location
+            <span className="transition-all ease-in hover:text-xl">View Location</span>
           </a>
         </motion.h4>
       </div>

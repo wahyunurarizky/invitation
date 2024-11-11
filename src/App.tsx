@@ -7,6 +7,7 @@ import clsx from 'clsx';
 
 function App() {
   const { width, height } = useWindowDimensions();
+  const [showMusic, setShowMusic] = useState(false);
 
   const realWidth = (width > 1440 ? 1440 : width) - 0;
   const realHeight = realWidth * 0.6 < height ? realWidth * 0.6 : height;
@@ -25,6 +26,12 @@ function App() {
   // Function to toggle the scale
   const toggleScale = () => {
     setIsScaled(true);
+    setShowMusic(true);
+    toggleMusic();
+  };
+
+  const showMusicAndPlay = () => {
+    setShowMusic(true);
     toggleMusic();
   };
 
@@ -59,10 +66,10 @@ function App() {
           toggleScale={toggleScale}
         />
       ) : (
-        <MobileView toggleMusic={toggleMusic} />
+        <MobileView showMusicAndPlay={showMusicAndPlay} />
       )}
       <div className="absolute bottom-4 right-4 z-[1000] cursor-pointer" onClick={toggleMusic}>
-        <PiVinylRecord className={`text-5xl  ${isPlaying ? 'animate-spinLong' : ''}`} />
+        {showMusic && <PiVinylRecord className={`text-5xl ${isDesktop ? 'text-black' : 'text-inv-grayA'}  ${isPlaying ? 'animate-spinLong' : ''}`} />}
       </div>
       <audio ref={audioRef} src="/song.mp3" />
     </div>
