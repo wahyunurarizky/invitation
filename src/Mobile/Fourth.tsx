@@ -12,8 +12,7 @@ const Fourth = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isAddressExpanded, setIsAddressExpanded] = useState(false);
 
-  const address =
-    'The Oak Tower Lobby B - Jl. Perintis Kemerdekaan No.99, RT.1/RW.8, Pulo Gadung, Kec. Pulo Gadung, East Jakarta, Special Capital Region of Jakarta 13260';
+  const address = 'The Oak Tower Lobby B - Jl. Perintis Kemerdekaan No.99, RT.1/RW.8, Pulo Gadung, Kec. Pulo Gadung, East Jakarta, DKI Jakarta 13260';
   const shortAddress = address.slice(0, 21) + '...';
 
   useEffect(() => {
@@ -54,7 +53,7 @@ const Fourth = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-6xl font-semibold font-Belleza">{timeLeft.days}</div>
-          <div className="text-sm">DAYS</div>
+          <div className="text-sm text-inv-grayA">DAYS</div>
         </motion.div>
         <motion.div
           className="flex flex-col items-center justify-center"
@@ -63,7 +62,7 @@ const Fourth = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-6xl font-semibold font-Belleza">{timeLeft.hours}</div>
-          <div className="text-sm">HOURS</div>
+          <div className="text-sm text-inv-grayA">HOURS</div>
         </motion.div>
         <motion.div
           className="flex flex-col items-center justify-center"
@@ -72,7 +71,7 @@ const Fourth = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-6xl font-semibold font-Belleza">{timeLeft.minutes}</div>
-          <div className="text-sm">MINUTES</div>
+          <div className="text-sm text-inv-grayA">MINUTES</div>
         </motion.div>
         <motion.div
           className="flex flex-col items-center justify-center"
@@ -81,7 +80,7 @@ const Fourth = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="text-6xl font-semibold font-Belleza">{timeLeft.seconds}</div>
-          <div className="text-sm">SECONDS</div>
+          <div className="text-sm text-inv-grayA">SECONDS</div>
         </motion.div>
       </div>
 
@@ -134,8 +133,8 @@ const Fourth = () => {
                 <img src="/bca.png" className="h-[20px]" alt="BCA Logo" />
                 <div className="flex items-center justify-start gap-2">
                   <p className="font-semibold">Wahyu Nur Arizky - </p>
-                  <span>12345678</span>
-                  <button onClick={() => copyToClipboard('12345678')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
+                  <span>6090 5514 83</span>
+                  <button onClick={() => copyToClipboard('6090551483')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
                     <BiCopy />
                   </button>
                 </div>
@@ -149,8 +148,8 @@ const Fourth = () => {
                 <img src="/mandiri.png" className="h-[24px]" alt="Mandiri Logo" />
                 <div className="flex items-center justify-start gap-2">
                   <p className="font-semibold">Naurotun Nadhifah - </p>
-                  <span>12345678</span>
-                  <button onClick={() => copyToClipboard('12345678')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
+                  <span>7000 1042 3437</span>
+                  <button onClick={() => copyToClipboard('700010423437')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
                     <BiCopy />
                   </button>
                 </div>
