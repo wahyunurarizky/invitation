@@ -132,7 +132,7 @@ const Fourth = () => {
               >
                 <img src="/bca.png" className="h-[20px]" alt="BCA Logo" />
                 <div className="flex items-center justify-start gap-2">
-                  <p className="font-semibold">Wahyu Nur Arizky - </p>
+                  <p className="font-semibold">Wahyu Nur A - </p>
                   <span>6090551483</span>
                   <button onClick={() => copyToClipboard('6090551483')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
                     <BiCopy />
@@ -147,7 +147,7 @@ const Fourth = () => {
               >
                 <img src="/mandiri.png" className="h-[24px]" alt="Mandiri Logo" />
                 <div className="flex items-center justify-start gap-2">
-                  <p className="font-semibold">Naurotun Nadhifah - </p>
+                  <p className="font-semibold">Naurotun N - </p>
                   <span>700010423437</span>
                   <button onClick={() => copyToClipboard('700010423437')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
                     <BiCopy />
