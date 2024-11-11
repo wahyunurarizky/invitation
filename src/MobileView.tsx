@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import First from './Mobile/First';
@@ -17,15 +18,15 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
     // Request fullscreen
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
+    } else if ((document.documentElement as any).mozRequestFullscreen) {
       // Firefox
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
+      (document.documentElement as any).mozRequestFullscreen();
+    } else if ((document.documentElement as any).webkitRequestFullscreen) {
       // Chrome, Safari and Opera
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) {
+      (document.documentElement as any).webkitRequestFullscreen();
+    } else if ((document.documentElement as any).msRequestFullscreen) {
       // IE/Edge
-      document.documentElement.msRequestFullscreen();
+      (document.documentElement as any).msRequestFullscreen();
     }
   };
 
