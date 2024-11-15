@@ -6,6 +6,8 @@ import Second from './Mobile/Second';
 import Third from './Mobile/Third';
 import Fourth from './Mobile/Fourth';
 import Fifth from './Mobile/Fifth';
+import FirstHalf from './Mobile/FirstHalf';
+import Sixth from './Mobile/Sixth';
 
 const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
   const [isCoverVisible, setIsCoverVisible] = useState(true);
@@ -42,7 +44,7 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
   }, []);
 
   return (
-    <div className="w-full max-w-md mx-auto overflow-x-hidden overflow-y-scroll snap-y snap-mandatory h-dvh bg-inv-white4">
+    <div className="w-full max-w-md mx-auto overflow-x-hidden overflow-y-scroll snap-y snap-mandatory h-dvh bg-inv-white5">
       <AnimatePresence>
         {isCoverVisible && (
           <motion.div
@@ -141,6 +143,9 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
             <First />
           </div>
           <div className="snap-start">
+            <FirstHalf />
+          </div>
+          <div className="snap-start">
             <Second />
           </div>
           <div className="snap-start">
@@ -151,6 +156,9 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
           </div>
           <div className="snap-start">
             <Fifth />
+          </div>
+          <div className="snap-start">
+            <Sixth />
           </div>
         </div>
       )}

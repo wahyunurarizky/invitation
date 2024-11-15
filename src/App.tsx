@@ -47,12 +47,12 @@ function App() {
     }
   };
 
-  const isDesktop = width >= 1920;
+  const isDesktop = width >= 4000;
 
   return (
     <div
       className={clsx('relative flex items-center justify-center w-full bg-cover h-dvh ', {
-        'bg-inv-white6': !isDesktop,
+        'bg-inv-white4': !isDesktop,
         'bg-table': isDesktop
       })}
     >

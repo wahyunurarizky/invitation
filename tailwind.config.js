@@ -23,7 +23,8 @@ export default {
           gray50: 'rgba(57, 56, 44, 0.5)',
           gray20: 'rgba(57, 56, 44, 0.2)',
           grayA: '#616161',
-          dark: '#39382C'
+          dark: '#39382C',
+          dark2: '#171717'
         }
       },
       fontFamily: {

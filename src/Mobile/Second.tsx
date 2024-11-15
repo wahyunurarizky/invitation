@@ -3,19 +3,54 @@ import { motion } from 'framer-motion';
 const Second = () => {
   return (
     <motion.div
-      className="flex flex-col justify-between w-full gap-4 pb-8 h-dvh"
+      className="relative flex flex-col justify-between w-full gap-4 pb-8 overflow-hidden h-dvh"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ amount: 0.5 }}
     >
       <motion.div
-        className="flex-1 bg-bottom bg-cover bg-mobile3"
+        className="relative bg-bottom bg-cover overflow"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.5 }}
-      ></motion.div>
+      >
+        <motion.img
+          src="/mobile3.png"
+          className="z-20 w-full opacity-0"
+          alt=""
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ amount: 0.5 }}
+        />
+        <motion.img
+          src="/mobile3.png"
+          className="absolute top-0 z-20 object-cover w-full h-full"
+          alt=""
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ amount: 0.5 }}
+        />
+        <motion.img
+          src="/circle2.png"
+          alt=""
+          className="absolute overflow-hidden transform -bottom-16 -left-24 -translate -z-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ amount: 0.5 }}
+        />
+      </motion.div>
+      <motion.img
+        src="/circle2.png"
+        alt=""
+        className="absolute overflow-hidden transform -rotate-45 -translate-y-1/2 -right-48 -translate -z-0 bottom-2"
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.5 }}
+      />
 
       <div className="px-8">
         <motion.h2

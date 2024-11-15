@@ -9,7 +9,9 @@ const First = () => {
       transition={{ duration: 1 }}
       viewport={{ amount: 0.5 }} // Triggers animation when 50% of the element is in view
     >
-      <div className="flex-1 bg-bottom bg-cover bg-mobile1 animate-zoomInOut"></div>
+      <div className="flex-1 overflow-hidden bg-bottom bg-cover bg-mobile1 animate-zoomInOut">
+        <img src="/mobile1.png" className="w-full opacity-0" alt="" />
+      </div>
       <div className="p-10">
         <motion.h2
           className="font-Comfortaa text-[24px] text-inv-grayA font-light max-w-[200px]"
