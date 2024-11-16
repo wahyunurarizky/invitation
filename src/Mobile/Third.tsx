@@ -36,16 +36,16 @@ const Third = () => {
       />
 
       {/* Animated flower image with hover effect */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ amount: 0.5 }}
-        className="absolute bottom-0 flex items-end justify-end h-full p-8 -right-8"
+        className="absolute bottom-0 flex items-end justify-start h-full p-8 -right-0 opacity-15"
       >
         <motion.img
-          src="/flower.webp"
-          className="w-40"
+          src="/flower.png"
+          className="w-40 opacity-40"
           alt="Flower"
           whileHover={{
             scale: 1.1, // Slight scaling on hover
@@ -53,7 +53,7 @@ const Third = () => {
           }}
           transition={{ type: 'spring', stiffness: 300 }}
         />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };

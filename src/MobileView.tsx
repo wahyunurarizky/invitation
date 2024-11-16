@@ -156,8 +156,6 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
           </div>
           <div className="snap-start">
             <Fifth />
-          </div>
-          <div className="snap-start">
             <Sixth />
           </div>
         </div>

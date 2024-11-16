@@ -9,7 +9,7 @@ function App() {
   const { width, height } = useWindowDimensions();
   const [showMusic, setShowMusic] = useState(false);
 
-  const realWidth = (width > 1440 ? 1440 : width) - 0;
+  const realWidth = (width > 1920 ? 1920 : width) - 0;
   const realHeight = realWidth * 0.6 < height ? realWidth * 0.6 : height;
 
   const flipWidth = realWidth / 2 - 32;

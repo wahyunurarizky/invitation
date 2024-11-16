@@ -60,10 +60,9 @@ const Fifth = () => {
   return (
     <motion.div
       className="flex flex-col items-center justify-between w-full gap-4 px-8 py-16 h-dvh font-Comfortaa"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ amount: 0.5 }}
+      // initial={{ opacity: 0, y: 50 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 1 }}
     >
       {/* Heading Animation */}
       <motion.div

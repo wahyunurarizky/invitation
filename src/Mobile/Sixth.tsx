@@ -16,9 +16,9 @@ const Sixth = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-between w-full gap-8 pt-16 pb-8 h-dvh font-Comfortaa">
+    <div className="flex flex-col items-center justify-start w-full gap-8 pt-16 pb-8 h-dvh font-Comfortaa">
       {/* Animated Line Divider */}
-      <motion.div
+      {/* <motion.div
         className="px-10"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -27,11 +27,11 @@ const Sixth = () => {
         viewport={{ once: false }}
       >
         <img src="/line.svg" className="w-full" alt="" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Thank You Message Animation */}
       <motion.div
-        className="px-10 font-crimson font-light text-inv-dark2 text-[20px]/[18px]"
+        className="px-10 font-crimson text-justify font-light text-inv-dark2 text-[20px]/[22px]"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -48,8 +48,8 @@ const Sixth = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: false }}
       >
-        <h3 className="font-crimson text-inv-grayA font-light text-[18px]/[18px]">
-          as optional, we would like to say thank you sooo much to those who want to send us a gift
+        <h3 className="font-crimson text-justify text-inv-grayA font-light text-[18px]/[20px]">
+          Your presence and blessings are the greatest gifts to us. However, if you would like to share in our happiness, here is the information you can use{' '}
         </h3>
         <Button
           type="submit"
@@ -100,10 +100,6 @@ const Sixth = () => {
               transition={{ duration: 0.3 }}
             >
               <h2 className="mb-4 text-2xl font-bold">Best Wishes</h2>
-              <p className="mb-2 text-sm">
-                Your presence and blessings are the greatest gifts to us. However, if you would like to share in our happiness, here is the information you can
-                use:
-              </p>
               <svg className="mt-4" width="310" height="9" viewBox="0 0 310 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line y1="0.5" x2="245" y2="0.5" stroke="#616161" />
                 <line x1="66" y1="8.5" x2="310" y2="8.50002" stroke="#616161" />
