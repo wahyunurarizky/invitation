@@ -92,3 +92,15 @@ html {
   transform: translateY(-50%) scaleX(-1);
   clip-path: polygon(0 50%, 100% 75%, 100% 25%);
 }
+
+/* Container with scroll snapping */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Child elements with individual snapping */
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always; /* Reduces accidental snapping */
+}

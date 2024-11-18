@@ -8,10 +8,23 @@ import Fourth from './Mobile/Fourth';
 import Fifth from './Mobile/Fifth';
 import FirstHalf from './Mobile/FirstHalf';
 import Sixth from './Mobile/Sixth';
+import SwitchModeAlert from './Mobile/SwitchModeAlert';
 
 const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
   const [isCoverVisible, setIsCoverVisible] = useState(true);
   const [recipient, setRecipient] = useState('');
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Set the initial theme
+    setIsDarkMode(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }, []);
+
+  const switchToLightMode = () => {
+    document.documentElement.classList.remove('dark');
+    setIsDarkMode(false);
+  };
 
   const handleOpenInvitation = () => {
     setIsCoverVisible(false);
@@ -45,6 +58,8 @@ const MobileView = ({ showMusicAndPlay }: { showMusicAndPlay: () => void }) => {
 
   return (
     <div className="w-full max-w-md mx-auto overflow-x-hidden overflow-y-scroll snap-y snap-mandatory h-dvh bg-inv-white5">
+      {isDarkMode && <SwitchModeAlert onConfirm={switchToLightMode} />}
+
       <AnimatePresence>
         {isCoverVisible && (
           <motion.div

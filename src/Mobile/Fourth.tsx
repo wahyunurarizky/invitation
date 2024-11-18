@@ -55,21 +55,21 @@ const Fourth = () => {
         {['days', 'hours', 'minutes', 'seconds'].map((unit, index) => (
           <motion.div
             key={unit}
-            className="flex flex-col items-start justify-center gap-1"
+            className="flex flex-col items-start justify-center gap-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 + 0.3 * index }} // Staggered delays
             viewport={{ amount: 0.5 }}
           >
-            <div className="text-5xl font-light text-inv-dark2 font-gideon">{timeLeft[unit]}</div>
-            <div className="text-md text-inv-grayA font-crimson">{unit.toUpperCase()}</div>
+            <div className="text-[40px]/[30px] font-light text-inv-dark2 font-gideon">{timeLeft[unit]}</div>
+            <div className="font-light text-[20px] text-inv-grayA font-crimson">{unit}</div>
           </motion.div>
         ))}
       </div>
 
       {/* "until 08/12/2024" Text (appears after countdown) */}
       <motion.div
-        className="px-10 font-light font-gideon text-inv-dark2"
+        className="px-10 font-light font-crimson text-[20px] text-inv-grayA"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.6 }} // Delay to show after countdown

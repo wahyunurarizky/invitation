@@ -5,10 +5,10 @@ import { Button } from '@mui/material';
 
 const Sixth = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isAddressExpanded, setIsAddressExpanded] = useState(false);
+  // const [isAddressExpanded, setIsAddressExpanded] = useState(false);
 
-  const address = 'The Oak Tower Lobby B - Jl. Perintis Kemerdekaan No.99, RT.1/RW.8, Pulo Gadung, Kec. Pulo Gadung, East Jakarta, DKI Jakarta 13260';
-  const shortAddress = address.slice(0, 21) + '...';
+  // const address = 'The Oak Tower Lobby B - Jl. Perintis Kemerdekaan No.99, RT.1/RW.8, Pulo Gadung, Kec. Pulo Gadung, East Jakarta, DKI Jakarta 13260';
+  // const shortAddress = address.slice(0, 21) + '...';
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -42,7 +42,7 @@ const Sixth = () => {
 
       {/* Optional Gift Text and Button */}
       <motion.div
-        className="flex flex-col gap-8 px-10"
+        className="flex flex-col gap-8 px-10 my-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -87,23 +87,23 @@ const Sixth = () => {
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="max-w-sm p-8 mx-auto text-center bg-white rounded-lg"
+              className="max-w-sm p-8 mx-auto text-center bg-white rounded-lg min-w-[400px]"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <h2 className="mb-4 text-2xl font-bold">Best Wishes</h2>
+              {/* <h2 className="mb-4 text-2xl font-bold">Best Wishes</h2>
               <svg className="mt-4" width="310" height="9" viewBox="0 0 310 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line y1="0.5" x2="245" y2="0.5" stroke="#616161" />
                 <line x1="66" y1="8.5" x2="310" y2="8.50002" stroke="#616161" />
-              </svg>
+              </svg> */}
 
               {/* Bank Information Animation */}
               <motion.div
@@ -114,12 +114,14 @@ const Sixth = () => {
                 viewport={{ once: false }}
               >
                 <img src="/bca.png" className="h-[20px]" alt="BCA Logo" />
-                <div className="flex items-center justify-start gap-2">
-                  <p className="font-semibold">Wahyu Nur A - </p>
-                  <span>6090551483</span>
-                  <button onClick={() => copyToClipboard('6090551483')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
-                    <BiCopy />
-                  </button>
+                <div className="flex flex-col items-center justify-start gap-2">
+                  <p className="font-semibold">Wahyu Nur Arizky</p>
+                  <div className="flex items-start justify-center w-full gap-2 text-center">
+                    <span>6090551483</span>
+                    <button onClick={() => copyToClipboard('6090551483')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
+                      <BiCopy />
+                    </button>
+                  </div>
                 </div>
               </motion.div>
               <motion.div
@@ -130,17 +132,19 @@ const Sixth = () => {
                 viewport={{ once: false }}
               >
                 <img src="/mandiri.png" className="h-[24px]" alt="Mandiri Logo" />
-                <div className="flex items-center justify-start gap-2">
-                  <p className="font-semibold">Naurotun N - </p>
-                  <span>700010423437</span>
-                  <button onClick={() => copyToClipboard('700010423437')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
-                    <BiCopy />
-                  </button>
+                <div className="flex flex-col items-center justify-start gap-2">
+                  <p className="font-semibold">Naurotun Nadhifah </p>
+                  <div className="flex justify-center gap-2">
+                    <span>700010423437</span>
+                    <button onClick={() => copyToClipboard('700010423437')} className="px-2 py-1 text-sm text-white rounded bg-inv-dark">
+                      <BiCopy />
+                    </button>
+                  </div>
                 </div>
               </motion.div>
 
               {/* Address Section Animation */}
-              <motion.div
+              {/* <motion.div
                 className="flex flex-col items-center justify-center gap-2 my-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -156,14 +160,14 @@ const Sixth = () => {
                     </button>
                   </p>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
-              <svg className="mb-4" width="310" height="9" viewBox="0 0 310 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* <svg className="mb-4" width="310" height="9" viewBox="0 0 310 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line y1="0.5" x2="245" y2="0.5" stroke="#616161" />
                 <line x1="66" y1="8.5" x2="310" y2="8.50002" stroke="#616161" />
-              </svg>
+              </svg> */}
 
-              <p className="text-sm text-gray-500">Thank you for all the attention and kindness given. We truly appreciate it.</p>
+              {/* <p className="text-sm text-gray-500">Thank you for all the attention and kindness given. We truly appreciate it.</p> */}
 
               <button onClick={() => setIsPopupOpen(false)} className="px-4 py-2 mt-4 text-black rounded hover:bg-white">
                 Close
