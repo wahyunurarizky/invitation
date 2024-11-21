@@ -8,7 +8,8 @@ export default {
         table: "url('/bg.png')",
         bgwhite: "url('/bgwhite.jpg')",
         mobile1: "url('/mobile1.png')",
-        mobile3: "url('/mobile3.png')"
+        mobile3: "url('/mobile3.png')",
+        lastimg: "url('/lastimg.png')"
       },
       colors: {
         inv: {

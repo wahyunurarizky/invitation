@@ -19,38 +19,54 @@ const Fifth = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!sender || !message) return;
 
     setLoading(true);
 
-    fetch('https://api.apispreadsheets.com/data/KGVXul9oElixwhEB/', {
+    try {
+      await sendToPrimaryUrl();
+    } catch (error) {
+      try {
+        await sendToFallbackUrl();
+      } catch (fallbackError) {
+        setSnackbarSeverity('error');
+        setSnackbarMessage('An error occurred. Please try again.');
+      }
+    } finally {
+      setLoading(false);
+      setOpenSnackbar(true);
+    }
+  };
+
+  const sendToPrimaryUrl = async () => {
+    const primaryUrl = 'https://api.apispreadsheets.com/data/KGVXul9oElixwhEB/';
+    await sendRequest(primaryUrl);
+  };
+
+  const sendToFallbackUrl = async () => {
+    const fallbackUrl = 'https://api.apispreadsheets.com/data/RJ5QqzKBysGRsl6P/';
+    await sendRequest(fallbackUrl);
+  };
+
+  const sendRequest = async (url: string) => {
+    const res = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ data: { sender, message } })
-    })
-      .then((res) => {
-        if (res.status === 201) {
-          setSnackbarSeverity('success');
-          setSnackbarMessage('Message sent successfully! Thank you for your message.');
-          setSender('');
-          setMessage('');
-        } else {
-          setSnackbarSeverity('error');
-          setSnackbarMessage('Failed to save the message.');
-        }
-      })
-      .catch(() => {
-        setSnackbarSeverity('error');
-        setSnackbarMessage('An error occurred. Please try again.');
-      })
-      .finally(() => {
-        setLoading(false);
-        setOpenSnackbar(true);
-      });
+    });
+
+    if (res.status === 201) {
+      setSnackbarSeverity('success');
+      setSnackbarMessage('Message sent successfully! Thank you for your message.');
+      setSender('');
+      setMessage('');
+    } else {
+      alert('An error occurred. Please try again.');
+    }
   };
 
   const handleCloseSnackbar = () => {
@@ -99,7 +115,7 @@ const Fifth = () => {
           viewport={{ amount: 0.5 }}
         >
           <TextField
-            label="Sender Name"
+            label="Sender"
             id="sender"
             type="text"
             value={sender}
@@ -147,7 +163,7 @@ const Fifth = () => {
             multiline
             rows={4}
             variant="outlined"
-            placeholder="Type your message here..."
+            placeholder="Type your message here"
             className="p-3"
             sx={{
               '& .MuiInputLabel-root': {

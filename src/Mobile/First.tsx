@@ -3,14 +3,15 @@ import { motion } from 'framer-motion';
 const First = () => {
   return (
     <motion.div
-      className="flex flex-col justify-between h-dvh"
+      className="relative flex flex-col justify-between h-dvh"
       initial={{ opacity: 0, x: 0 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
       viewport={{ amount: 0.5 }} // Triggers animation when 50% of the element is in view
     >
-      <div className="flex-1 overflow-hidden bg-bottom bg-cover bg-mobile1 animate-zoomInOut">
+      <div className="relative z-50 flex-1 overflow-hidden bg-bottom bg-cover bg-mobile1 animate-zoomInOut">
         <img src="/mobile1.png" className="w-full opacity-0" alt="" />
+        {/* <img src="/mobile1.png" className="absolute top-0 z-[2000] w-full" alt="" /> */}
       </div>
       <div className="p-10">
         <motion.h2
@@ -32,6 +33,10 @@ const First = () => {
           NANA & WAHYU
         </motion.h1>
       </div>
+
+      {/* New Image */}
+      {/* <img src="/circle3.png" alt="" className="absolute -right-[40px] w-[100px] z-10 bottom-[390px] " />
+      <img src="/circle3.png" alt="" className="absolute -right-24 w-[240px] z-10 bottom-0 " /> */}
     </motion.div>
   );
 };
