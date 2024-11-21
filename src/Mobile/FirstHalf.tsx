@@ -17,7 +17,7 @@ const FirstHalf = () => {
       >
         <div>With the grace of Allah,</div>
         <div className="text-inv-grayA text-[18px]/[20px] block mt-6 text-justify">
-          we are blessed to begin our journey towards completing half of our deen. We ask for your prayers and blessings as we start this path with faith and
+          We are blessed to begin our journey towards completing half of our deen. We ask for your prayers and blessings as we start this path with faith and
           love.
         </div>
       </motion.div>
