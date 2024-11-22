@@ -27,7 +27,7 @@ const Third = () => {
 
       {/* Animated timing.svg with fade-in and slide-up effect */}
       <motion.img
-        src="/timing.svg"
+        src="/timing2.svg"
         className="w-[280px] mr-10 mt-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
