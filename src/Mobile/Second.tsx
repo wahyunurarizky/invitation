@@ -71,7 +71,8 @@ const Second = () => {
           transition={{ duration: 1, delay: 0.6 }}
           viewport={{ amount: 0.5 }}
         >
-          Joglo Asri Sari Kuring Indah, Kota Cilegon
+          Joglo Asri Sari Kuring Indah, <br />
+          Kota Cilegon
           <a className="flex items-center justify-start mt-2 text-lg " href="https://maps.app.goo.gl/Rdm81Bm1dh7B26up8" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
               <g fill="currentColor">
