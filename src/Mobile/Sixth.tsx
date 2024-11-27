@@ -48,7 +48,7 @@ const Sixth = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         viewport={{ once: false }}
       >
-        <p className="font-crimson font-light text-[16px] text-inv-grayA">Love birds,</p>
+        <p className="font-crimson font-light text-[16px] text-inv-grayA">Lovebirds,</p>
         <h2 className="font-gideon text-[22px] font-light text-inv-dark2">NANA & WAHYU</h2>
       </motion.div>
 
